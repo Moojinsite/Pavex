@@ -32,6 +32,56 @@ p, .home-content p, .s-content p, .v-content p, .projects-content ul, .experienc
     color: white;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.home-content {
+    padding: 1rem;
+    width: 100%;
+}
+
+.intro-text {
+    text-align: justify;
+    max-width: 100%;
+    padding: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .home-content,
+    .intro-text {
+        padding: 1rem;
+    }
+}
+
 header{
     margin-top: 0px;
     margin-left: 0;
