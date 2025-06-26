@@ -87,14 +87,14 @@ header{
 }
 
 .navbar a {
-    color: #323232;
+    color: white;
     text-decoration: none;
     padding: 0.6rem 1.5rem; /* ↓ reduced padding */
     display: block;
     text-align: center;
     font-size: 1.6rem;
     border-right: 2px solid #000;
-    background-color: white;
+    background-color: grey;
     transition: background 0.3s;
     height: 100%;
     width: 100%;
