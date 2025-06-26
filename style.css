@@ -853,12 +853,38 @@ textarea{
 
 /* responsive site */
 
-@media (max-width: 768px){
-    .c-box {
-        grid-template-columns: 1fr;
-        height: auto;
-        margin-top: 9rem;
-    }
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #002b3d; /* match brand color */
+    width: 100%;
+  }
+
+  nav ul li {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+  }
+
+  nav ul li a {
+    color: white;
+    font-size: 18px;
+  }
+
+  .menu-toggle {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  nav ul.hidden {
+    display: none;
+  }
+}
 
     .c-img {
         display: none;
