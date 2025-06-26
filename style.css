@@ -856,50 +856,33 @@ textarea{
 /* responsive site */
 
 @media (max-width: 768px) {
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    background-color: #002b3d; /* match brand color */
-    width: 100%;
-  }
 
-  nav ul li {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #444;
-  }
+    .c-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;  
+        height: auto;                  
+    }
 
-  nav ul li a {
-    color: white;
-    font-size: 18px;
-  }
+    .c-img {
+        display: block;
+        height: 100%;
+        min-height: 300px;
+        background-size: cover;
+        background-position: center;
+    }
 
-  .c-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* keep 2 columns */
-    height: auto;                   /* allow auto height */
-  }
+    .c-content {
+        padding: 1.5rem;
+    }
 
-  .c-img {
-    display: block;
-    height: 100%;
-    min-height: 300px;
-    background-size: cover;
-    background-position: center;
-  }
+    .field,
+    textarea {
+        font-size: 1.6rem;
+    }
 
-  .c-content {
-    padding: 1.5rem;
-  }
-
-  .field,
-  textarea {
-    font-size: 1.6rem;
-  }
-
-  .c-content .btn {
-    font-size: 1.6rem;
-  }
+    .c-content .btn {
+        font-size: 1.6rem;
+    }
 
     .c-content {
         padding: 2rem;
@@ -1090,6 +1073,4 @@ textarea{
         font-size: 3.5rem;
         text-align: center;
     }
-	
-    
 }
