@@ -972,4 +972,20 @@ textarea{
         font-size: 3.5rem;
         text-align: center;
     }
+	
+    .home {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('pavexmaina.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 140px;
+    color: white;
+    text-align: center;
+    }
 }
