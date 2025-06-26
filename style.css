@@ -161,6 +161,14 @@ header{
     margin-bottom: 2.5rem;
 }
 
+.intro-text {
+    text-align: justify;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
 .map {
     display: none;
 }
