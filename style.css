@@ -102,7 +102,7 @@ header{
 }
 
 .navbar a:hover {
-    background-color: #a00000;
+    background-color: #555;
     color: white;
     padding: 0.6rem 1.5rem; /* match padding to avoid resizing on hover */
 }
