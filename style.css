@@ -1014,7 +1014,11 @@ textarea{
         text-align: left;
         padding-left: 2rem;
     }
-
+	
+    .services-body{
+        height: auto;
+    }
+	
     .s-corner {
         bottom: 0;            
         right: 0;             
