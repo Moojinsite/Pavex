@@ -754,6 +754,7 @@ textarea{
     display: flex; 
     background-color: #053b53;
     flex-wrap: wrap; 
+    position: relative;
 }
 
 .v-image{
@@ -899,8 +900,6 @@ textarea{
   .c-content .btn {
     font-size: 1.6rem;
   }
-}
-
 
     .c-content {
         padding: 2rem;
