@@ -89,22 +89,28 @@ header{
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 0.6rem 1.5rem; /* ↓ reduced padding */
+    padding: 0.5rem 1rem;
     display: block;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     border-right: 2px solid #000;
     background-color: grey;
     transition: background 0.3s;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 6px 6px 0 0;
 }
 
 .navbar a:hover {
     background-color: #555;
     color: white;
-    padding: 0.6rem 1.5rem; /* match padding to avoid resizing on hover */
+}
+
+.navbar a.active {
+    background-color: #222; /* darker shade */
+    color: white;
+    font-weight: bold;
 }
 
 /* Location */
