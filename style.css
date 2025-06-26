@@ -1047,7 +1047,7 @@ textarea{
     }
 
     .v-corner {
-        position: static; 
+        position: fixed; 
         margin-top: 2rem;
         width: 100px;
         align-self: flex-end;
