@@ -346,29 +346,30 @@ iframe{
 	z-index: -1;
 }
 
-.c-box{
-	width: 100%;
-    max-width: 900px;
-    height: 500px;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-	justify-content: center;
-	align-items: stretch;
-	text-align: center;
-	background-color: #fff;
-	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
-    margin: auto;
-    margin-top: 10rem;
+.c-box {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+  margin: 10rem auto 0 auto;
 }
 
-.c-img{
-	background: url("images/contact.jpg") no-repeat center;
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-	height: 100%;
-    min-height: 100%;
+.c-img {
+  background: url("images/contact.jpg") no-repeat center;
+  background-size: cover;
+  background-position: center;
+  width: 100%;         /* ← ADD THIS */
+  height: 100%;
+  min-height: 100%;
+  display: block;      /* ← ensure it's not hidden */
 }
+
 
 .c-content{
 	padding: 20px;
