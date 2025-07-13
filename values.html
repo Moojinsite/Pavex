@@ -15,6 +15,10 @@
                 </a>
             </div>
             <nav class="navbar">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
                 <ul>
                     <li><a href="story.html" >STORY</a></li>
                     <li><a href="values.html" class="active">VALUES</a></li>
@@ -34,20 +38,34 @@
             </nav>
         </header>
         <section class="values">
-            <div class="v-image"></div>
+            <div class="v-image slide-in-left"></div>
             <div class="v-content">
                 <h1>Mission</h1>
                 <p>At <span style="color: #50bfdd"><b>PAVEx,</b></span> we are dedicated to delivering innovative, 
                     sustainable, and data-driven pavement design, 
                     valuation, and solutions by leveraging cutting-edge 
                     technology and advanced technical expertise.</p>
+                <br>
                 <h1>Vision</h1>
                 <p>We aim to become a global leader and driving force in 
                     pavement engineering, delivering affordable, resilient 
                     solutions through sustainable practices, long-lasting 
                     pavements, and advanced technologies.</p>
             </div>
-            <img src="images/logo2.png" alt="Bottom Corner Image" class="v-corner">
+            <img src="images/logo2.png" alt="Bottom Corner Image" class="img-corner">
         </section>
+        <script>
+            const faders = document.querySelectorAll('.slide-in-left');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+                });
+            });
+
+            faders.forEach(el => observer.observe(el));
+        </script>
     </body>
 </html>
