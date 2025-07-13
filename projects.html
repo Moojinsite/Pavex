@@ -6,6 +6,9 @@
         <link rel="icon" type="image/png" href="images/pavex b.jpg">
         <title>PAVEx</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     </head>
     <body>
         <header>
@@ -15,16 +18,20 @@
                 </a>
             </div>
             <nav class="navbar">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
                 <ul>
-                    <li><a href="story.html" >STORY</a></li>
+                    <li><a href="story.html">STORY</a></li>
                     <li><a href="values.html">VALUES</a></li>
                     <li><a href="services.html">SERVICES</a></li>
                     <li class="has-dropdown">
                         <span class="nav-link">WORKS</span>
                             <ul class="dropdown">
-                                <li><a href="projects.html">PROJECTS</a></li>
+                                <li><a href="projects.html" class="active">PROJECTS</a></li>
                                 <li><a href="experience.html">EXPERIENCES</a></li>
-                                <li><a href="partnerships.html" class="active">PARTNERSHIPS</a></li>
+                                <li><a href="partnerships.html">PARTNERSHIPS</a></li>
                             </ul>
                     </li>
                     <li><a href="announce.html">ANNOUNCEMENTS</a></li>
@@ -33,85 +40,123 @@
                 </ul>
             </nav>
         </header>
-        <section>
-            <div class="container">
-                <div class="slide">
-                    <div class="pro" id="slide-1" style="background-image: url(./images/slide-1.jpg);">
-                        <div class="content">
-                            <div class="text">
-                                <div class="start">Our Projects</div>
-                                <div class="sub">At PAVEx, each project reflects our commitment to delivering innovative, data-driven, and sustainable pavement solutions. From leading international pavement design initiatives to supporting government agencies and institutions through technical consultancy, our work spans across continents and sectors. With deep expertise and advanced technologies, we turn complex challenges into long-lasting pavement infrastructure that empowers communities and drives progress.
+        <section class="project-section">
+            <div class="project-container">
+                <div class="card-slider swiper">
+                    <div class="slider-wrapper">
+                        <div class="card-list swiper-wrapper">
+
+                            <div class="card-item swiper-slide">
+                                <div class="card-project">
+                                    <h2 class="card-title-project">Our Projects</h2>
+                                    <p class="card-description">At PAVEx, each project reflects our commitment to delivering innovative, data-driven, and sustainable pavement solutions. From leading international pavement design initiatives to supporting government agencies and institutions through technical consultancy, our work spans across continents and sectors. With deep expertise and advanced technologies, we turn complex challenges into long-lasting pavement infrastructure that empowers communities and drives progress.</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="pro" id="slide-2" style="background-image: url(./images/slide-2.jpg);">
-                        <div class="content">
-                            <div class="text">
-                                <div class="title">Principal Investigator in Developing the Pavement Laboratory of JRMSU</div>
+
+                            <div class="card-item swiper-slide">
+                                <img src="images/JRMSU6.jpg" class="card-image">
+                                <div href="jrsmu.html" class="card-details">
+                                    <h2 class="card-title">Principal Investigator in Developing the Pavement Laboratory of JRMSU</h2>
+                                </div>
+                                <a href="jrmsu.html" class="card-button-link">
+                                    <button class="card-button material-symbols-rounded">arrow_forward</button>
+                                </a>
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <img src="images/AU.jpg" class="card-image">
+                                <div class="card-details">
+                                    <h2 class="card-title">Pavement Design Projects in Australia and Korea</h2>
+                                </div>
+                                <a href="aukr.html" class="card-button-link">
+                                    <button class="card-button material-symbols-rounded">arrow_forward</button>
+                                </a>
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <img src="images/DPWH5.jpg" class="card-image">
+                                <div class="card-details">
+                                    <h2 class="card-title">Workshops and Seminars for the Department of Public Works and Highways (DPWH)</h2>
+                                </div>
+                                <a href="dpwh.html" class="card-button-link">
+                                    <button class="card-button material-symbols-rounded">arrow_forward</button>
+                                </a>
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <img src="images/iceat.jpg" class="card-image">
+                                <div class="card-details">
+                                    <h2 class="card-title">Consultation Services for Different Private Institutions</h2>
+                                </div>
+                                <a href="consult.html" class="card-button-link">
+                                    <button class="card-button material-symbols-rounded">arrow_forward</button>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="pro" id="slide-3" style="background-image: url(./images/slide-3.jpg);">
-                        <div class="content">
-                            <div class="text">
-                                <div class="title">Pavement design projects in Australia and Korea</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pro" id="slide-4" style="background-image: url(./images/slide-3.jpg);">
-                        <div class="content">
-                            <div class="text">
-                                <div class="title">Workshops and seminars for the Department of Public Works and Highways (DPWH)</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pro" id="slide-5" style="background-image: url(./images/slide-2.jpg);">
-                        <div class="content">
-                            <div class="text">
-                                <div class="title">Consultation services for different Private Institutions</div>
-                            </div>
-                        </div>
+
+                        <div class="swiper-pagination"></div>
+                        <div class="slider-button swiper-button-prev"></div>
+                        <div class="slider-button swiper-button-next"></div>
+
                     </div>
                 </div>
             </div>
-            
-            <div class="button">
-                <button class="prev"><i
-                        class="fa-solid fa-arrow-left"></i></button>
-                <button class="next"><i
-                        class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-            <img src="images/logo2.png" alt="Bottom Corner Image" class="v-corner">
+            <img src="images/logo2.png" alt="Bottom Corner Image" class="img-corner">
         </section>
-
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
-            const next = document.querySelector('.next');
-            const prev = document.querySelector('.prev');
-            const slide = document.querySelector('.slide');
+            const swiper = new Swiper(".slider-wrapper", {
 
-            function updateActiveSlide() {
-                const items = document.querySelectorAll('.pro');
-                items.forEach(item => pro.classList.remove('active'));
-                if (items[0]) {
-                    items[0].classList.add('active');
+            loop: true,
+            spaceBetween: 40,
+            grabCursor: true,
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                390: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 32,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 36,
+                },
+                1250: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1580: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                1920: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
                 }
-            }
-
-            next.addEventListener('click', function () {
-                const items = document.querySelectorAll('.pro');
-                slide.appendChild(items[0]);
-                updateActiveSlide();
+            },
             });
-
-            prev.addEventListener('click', function () {
-                const items = document.querySelectorAll('.pro');
-                slide.prepend(items[items.length - 1]);
-                updateActiveSlide();
-            });
-
-            updateActiveSlide();
         </script>
     </body>
 </html>
