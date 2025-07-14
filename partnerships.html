@@ -6,6 +6,10 @@
         <link rel="icon" type="image/png" href="images/pavex b.jpg">
         <title>PAVEx</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <header>
@@ -34,76 +38,90 @@
             </nav>
         </header>
         <section>
-            <div class="container">
-                <div class="slide">
-                    <div class="item" id="slide-1" style="background-image: url(./images/slide-1.jpg);">
-                        <div class="content">
-                            <div class="text">
-                                <div class="name">Our Partners</div>
-                                <div class="des">At PAVEx, collaboration drives excellence. 
+            <div class="slider">
+                <div class="list">
+                    <div class="item">
+                        <div class="bg">
+                            <img src="images/partnership.jpg">
+                        </div>
+                         <div class="text">
+                            <div class="name-partner">Our Partners</div>
+                            <div class="des-partner">At PAVEx, collaboration drives excellence. 
                                 We proudly partner with trusted organizations and institutions to deliver innovative pavement engineering solutions. 
                                 Together, we make a lasting impact on roads, communities, and the future.
                             </div>
-                            </div>
                         </div>
                     </div>
-                    <div class="item" id="slide-2" style="background-image: url(./images/slide-2.jpg);">
-                        <div class="content">
-                            <img src="./images/jrmsu.jpg" class="img" alt="JRMSU Logo">
-                            <div class="text">
-                                <div class="name">Jose Rizal Memorial State University</div>
-                                <div class="des">JRMSU</div>
-                            </div>
+                    <div class="item">
+                        <div class="bg">
+                            <img src="images/slide-1.jpg">
+                        </div>
+                        <div class="text">
+                            <img src="./images/jrmsu.png" class="img" alt="JRMSU Logo">
+                            <div class="name">Jose Rizal Memorial State University</div>
+                            <div class="des">JRMSU</div>
                         </div>
                     </div>
-                    <div class="item" id="slide-3" style="background-image: url(./images/slide-3.jpg);">
-                        <div class="content">
-                            <img src="./images/dce.jpg" class="img" alt="UPLB DCE Logo">
-                            <div class="text">
-                                <div class="name">Department of Civil Engineering</div>
-                                <div class="des">UPLB DCE</div>
-                            </div>
+                    <div class="item">
+                        <div class="bg">
+                            <img src="images/slide-2.jpg">
+                        </div>
+                        <div class="text">
+                            <img src="./images/dce.pNg" class="imgs" alt="UPLB DCE Logo">
+                            <div class="name">University of the Philippines - Los Baños <br> Department of Civil Engineering</div>
+                            <div class="des">UPLB DCE</div>
                         </div>
                     </div>
                 </div>
+                <div class="buttons">
+                    <button id="prev"><</button>
+                    <button id="next">></button>
+                </div>
+                <ul class="dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
-            
-            <div class="button">
-                <button class="prev"><i
-                        class="fa-solid fa-arrow-left"></i></button>
-                <button class="next"><i
-                        class="fa-solid fa-arrow-right"></i></button>
-            </div>
+    </section>
+    <script>
+        let slider = document.querySelector('.slider .list');
+        let items = document.querySelectorAll('.slider .list .item');
+        let next = document.getElementById('next');
+        let prev = document.getElementById('prev');
+        let dots = document.querySelectorAll('.slider .dots li');
 
-            <img src="images/logo2.png" alt="Bottom Corner Image" class="v-corner">
-        </section>
+        let lengthItems = items.length - 1;
+        let active = 0;
 
-        <script>
-            const next = document.querySelector('.next');
-            const prev = document.querySelector('.prev');
-            const slide = document.querySelector('.slide');
+        next.onclick = function(){
+            active = active + 1 <= lengthItems ? active + 1 : 0;
+            reloadSlider();
+        }
 
-            function updateActiveSlide() {
-                const items = document.querySelectorAll('.item');
-                items.forEach(item => item.classList.remove('active'));
-                if (items[0]) {
-                    items[0].classList.add('active');
-                }
-            }
+        prev.onclick = function(){
+            active = active - 1 >= 0 ? active - 1 : lengthItems;
+            reloadSlider();
+        }
 
-            next.addEventListener('click', function () {
-                const items = document.querySelectorAll('.item');
-                slide.appendChild(items[0]);
-                updateActiveSlide();
+        function reloadSlider(){
+            slider.style.left = -items[active].offsetLeft + 'px';
+
+            let last_active_dot = document.querySelector('.slider .dots li.active');
+            last_active_dot.classList.remove('active');
+            dots[active].classList.add('active');
+        }
+
+        dots.forEach((li, key) => {
+            li.addEventListener('click', ()=>{
+                active = key;
+                reloadSlider();
             });
+        });
 
-            prev.addEventListener('click', function () {
-                const items = document.querySelectorAll('.item');
-                slide.prepend(items[items.length - 1]);
-                updateActiveSlide();
-            });
-
-            updateActiveSlide();
-        </script>
+        window.onresize = function(event) {
+            reloadSlider();
+        };
+    </script>
     </body>
 </html>
